@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+<link type="text/css" rel="stylesheet" type="text/css" href="style.css">
+<link href='Camera-icon.png' rel='shortcut icon' type='image/png'>
+</head> 
+
+<script>
+//Assign new button colors when a button is clicked
+function reset1(){
+	document.getElementById("videolink1").className="selected";
+	document.getElementById("videolink2").className="unselected";
+	document.getElementById("videolink3").className="unselected";
+	}
+function reset2(){
+	document.getElementById("videolink1").className="unselected";
+	document.getElementById("videolink2").className="selected";
+	document.getElementById("videolink3").className="unselected";
+	}
+function reset3(){
+	document.getElementById("videolink1").className="unselected";
+	document.getElementById("videolink2").className="unselected";
+	document.getElementById("videolink3").className="selected";
+}
+</script>
+
+
+<body style="height:100%;">
+<div class="container" align=center>
+<h1 align="center">U of U Atmospheric Sciences Camera Display</h1>
+<h2>Mountain Meteorology Lab</h2>
+
+<video id="videoclip" autoplay controls loop title="Video title">
+  <source id="mp4video" src="http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_hour.mp4" type="video/mp4"  />
+ </video>
+<br>
+<input type=button class="unselected" value="Live" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/';">
+<input type=button class="selected" id="videolink1" value="Recent" onclick="reset1()">
+<input type=button class="unselected" id="videolink2" value="Today" onclick='reset2();'>
+<input type=button class="unselected" id="videolink3" value="Yesterday" onclick='reset3();'>
+
+
+<script type="text/javascript">
+// Change the video when button is clicked	
+	var videocontainer = document.getElementById('videoclip');
+	var videosource = document.getElementById('mp4video');
+	var recent_vid =  'http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_hour.mp4';
+	var day_vid =     'http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_day.mp4';
+	var yesterday_vid='http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_yesterday.mp4';
+	 
+	var recent_button = document.getElementById("videolink1");
+	var day_button = document.getElementById("videolink2");
+	var yesterday_button = document.getElementById("videolink3");
+	
+	recent_button.addEventListener("click", function(event) {
+		videocontainer.pause();
+		videosource.setAttribute('src', recent_vid);
+		videocontainer.load();
+		videocontainer.play();
+	}, false);
+	day_button.addEventListener("click", function(event) {
+		videocontainer.pause();
+		videosource.setAttribute('src', day_vid);
+		videocontainer.load();
+		videocontainer.play();
+	}, false);
+	yesterday_button.addEventListener("click", function(event) {
+		videocontainer.pause();
+		videosource.setAttribute('src', yesterday_vid);
+		videocontainer.load();
+		videocontainer.play();
+	}, false);
+</script>
+ 
+ <p>
+<a href="http://meso1.chpc.utah.edu/station_cameras/archive/mtnmet_cam/">Downloadable Video Archive (.mov)</a>
+</div>
+</body>
+</html>

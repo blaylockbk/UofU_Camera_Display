@@ -1,0 +1,119 @@
+/************************************************
+Style sheet for Camera Display
+*************************************************/
+
+html, body{
+	background: linear-gradient(white, #3399ff);
+	font-family:Geneva, sans-serif;
+	margin:0;
+}
+
+h1{
+	font-size:35px;
+	color:#CF0000;
+	text-shadow:3px 3px 10px lightgrey;
+}
+h2{
+	font-size:20px;
+}
+
+.container1{
+	width:95%;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:3px;
+}
+.Lside_buttons{
+	position:absolute;
+	left:5%;
+	top:20%;
+	width:150px;
+
+	}
+.Rside_buttons{
+	position:absolute;
+	right:5%;
+	top:20%;
+	width:150px;
+	}
+.video_section{
+	float:center;
+	width:45%;
+}
+
+
+td{
+width:33%;
+}
+img{
+	width:95%;
+	margin-left: auto;
+    margin-right: auto;
+	border:2px solid;
+	border-color:black;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+video{
+	width:100%;
+	border:1px solid;
+	vertical-align:top;
+	display:block;
+	border:5px solid;
+	text-align: center;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+input{width:100%;}
+
+input.unselected {
+	cursor: pointer;
+	-moz-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+	box-shadow: inset 0px 1px 0px 0px #bee2f9;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+	background: -moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+	background-color: #63b8ee;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #3866a3;
+	color: #14396a;
+	font-size: large;
+	font-weight: bold;
+	padding: 6px 20px;
+	margin: 10px 5px;
+	text-decoration: none;
+
+	height:70px;
+}
+input.selected{
+	cursor: pointer;
+	-moz-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+	box-shadow: inset 0px 1px 0px 0px #bee2f9;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #14396a), color-stop(1, #468ccf) );
+	background: -moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+	background-color: #14396a;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #3866a3;
+	font-size: large;
+	font-weight: bold;
+	padding: 6px 20px;
+	margin: 10px 5px;
+	text-decoration: none;
+
+	height:70px;
+	color:#bee2f9;
+}
+
+input:hover {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+	background: -moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+	background-color: #468ccf;
+}
