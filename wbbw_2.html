@@ -14,26 +14,26 @@ Contact: brian.blaylock@utah.edu
 <script>
 //Assign new button colors when a button is clicked
 function reset1(){
-	document.getElementById("videolink1").className="btn btn-primary active";
-	document.getElementById("videolink2").className="btn btn-primary";
-	document.getElementById("videolink3").className="btn btn-primary";
+	document.getElementById("videolink1").className="selected";
+	document.getElementById("videolink2").className="unselected";
+	document.getElementById("videolink3").className="unselected";
 	}
 function reset2(){
-	document.getElementById("videolink1").className="btn btn-primary";
-	document.getElementById("videolink2").className="btn btn-primary active";
-	document.getElementById("videolink3").className="btn btn-primary";
+	document.getElementById("videolink1").className="unselected";
+	document.getElementById("videolink2").className="selected";
+	document.getElementById("videolink3").className="unselected";
 	}
 function reset3(){
-	document.getElementById("videolink1").className="btn btn-primary";
-	document.getElementById("videolink2").className="btn btn-primary";
-	document.getElementById("videolink3").className="btn btn-primary active";
+	document.getElementById("videolink1").className="unselected";
+	document.getElementById("videolink2").className="unselected";
+	document.getElementById("videolink3").className="selected";
 }
 </script>
 
 
 <body style="height:100%;">
 
-<h2 align="center"><i class="fa fa-video-camera" aria-hidden="true"></i> Mountain Meteorology Lab</h2>
+<h2 align="center"><i class="fa fa-video-camera" aria-hidden="true"></i> William Browning Building - West</h2>
 
 
 
@@ -41,28 +41,28 @@ function reset3(){
     <div class="col-md-2">
         <div class="btn-group-vertical">
             <button style="width:150px;" type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/';">Home</button>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='http://155.97.226.135/view/viewer_index.shtml?id=1552';">Live</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='http://atmos-camera-02.ext.cmes.utah.edu/view/viewer_index.shtml?id=3297';">Live</button>
         </div>
         <br><br>
         <div class="btn-group-vertical">
             <button style="width:150px;" type="button" class="btn btn-default disabled" >Time Lapse</button>
-            <button type="button" class="btn btn-primary active" id="videolink1" onclick="reset1()">Recent</button>
-            <button type="button" class="btn btn-primary" id="videolink2" onclick="reset2()">Today</button>
-            <button type="button" class="btn btn-primary" id="videolink3" onclick="reset3()">Yesterday</button>
+            <button type="button" class="btn btn-primary" id="videolink1">Recent</button>
+            <button type="button" class="btn btn-primary" id="videolink2">Today</button>
+            <button type="button" class="btn btn-primary" id="videolink3">Yesterday</button>
         </div>
     <br><br>
     <div class="btn-group-vertical">
         <button type="button" class="btn btn-default disabled" >Change Camera</button>
         <button style="width:150px;" type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/wbbw.html';">WBB-West</button>
         <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/wbbs.html';">WBB-South</button>
-        <button type="button" class="btn btn-primary active" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/mtmet.html';">MTMET</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/mtmet.html';">MTMET</button>
         <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/naa.html';">NAA</button>
     </div>
   </div>
 
   <div class="col-md-9">
         <video id="videoclip"  style="height:85vh;" autoplay controls loop title="Time Lapse">
-        <source id="mp4video" src="http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_hour.mp4" type="video/mp4"  />
+        <source id="mp4video" src="http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_hour.mp4" type="video/mp4"  />
         </video>
   </div>
   
@@ -74,9 +74,9 @@ function reset3(){
 // Change the video when button is clicked	
 	var videocontainer = document.getElementById('videoclip');
 	var videosource = document.getElementById('mp4video');
-	var recent_vid =  'http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_hour.mp4';
-	var day_vid =     'http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_day.mp4';
-	var yesterday_vid='http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_yesterday.mp4';
+	var recent_vid =  'http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_hour.mp4';
+	var day_vid =     'http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_day.mp4';
+	var yesterday_vid='http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_yesterday.mp4';
 	 
 	var recent_button = document.getElementById("videolink1");
 	var day_button = document.getElementById("videolink2");
