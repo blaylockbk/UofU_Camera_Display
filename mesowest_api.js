@@ -15,6 +15,8 @@ function CtoF(tempC){
 
 function short_name(data,stnidx){
   // Gets the name of the station and creates a short name
+  // This is better than using the station ID becuase sometimes the 
+  // station id's arn't very descriptive. 
         try{
         if (data.STATION[stnidx].NAME=='U of U William Browning Building'){
             s = 'WBB' 
@@ -95,8 +97,8 @@ $.getJSON('http://api.mesowest.net/v2/stations/nearesttime?callback=?',
   $('#ret-tempWBB').html(airTemp_0 + "&deg");
   $('#ret-tempMTMET').html(airTemp_3 + "&deg");
   $('#ret-tempNAA').html(airTemp_4 + "&deg"); 
-  $('#ret-tempFPS').html(airTemp_5 + "&deg");
-  $('#ret-tempFPN').html(airTemp_1 + "&deg");
+  $('#ret-tempFPN').html(airTemp_5 + "&deg");
+  $('#ret-tempFPS').html(airTemp_1 + "&deg");
   $('#ret-tempEYSC').html(airTemp_2 + "&deg");
 
 }); 
