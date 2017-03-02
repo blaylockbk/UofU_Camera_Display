@@ -1,4 +1,4 @@
-# MesoWest Camera Display
+# ![MesoWest 20th Anniversary](MesoWest_20th_black.png) Camera Display
 
 A web interface for viewing weather cameras deployed by the 
 [MesoWest group](http://meso1.chpc.utah.edu/mesowest_overview/) at 
@@ -30,4 +30,3 @@ the `mesowest_api.js` and `CurrentTemp.js` scripts.
 * FPS - Flight Park North
 * GNI - Gunnison Island (PELICam)
 * EYSC - Eyring Science Center at BYU (camera looking at Timpanogos)
-
