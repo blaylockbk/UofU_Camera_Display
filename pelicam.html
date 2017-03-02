@@ -41,29 +41,29 @@ function reset3(){
     <div class="col-md-2">
         <div class="btn-group-vertical">
             <button style="width:150px;" type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/';">Home</button>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='http://atmos-camera-02.ext.cmes.utah.edu/view/viewer_index.shtml?id=3297';">Live</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='http://meso1.chpc.utah.edu/station_cameras/gunnison_cam/gunnison_cam_current.jpg';">Live</button>
         </div>
         <br><br>
         <div class="btn-group-vertical">
             <button style="width:150px;" type="button" class="btn btn-default disabled" >Time Lapse</button>
-            <button type="button" class="btn btn-primary active" id="videolink1" onclick="reset1()">Recent</button>
-            <button type="button" class="btn btn-primary" id="videolink2" onclick="reset2()">Today</button>
-            <button type="button" class="btn btn-primary" id="videolink3" onclick="reset3()">Yesterday</button>
+            <button type="button" class="btn btn-primary disabled" id="videolink1" onclick="reset1()">Recent</button>
+            <button type="button" class="btn btn-primary active" id="videolink2" onclick="reset2()">Today</button>
+            <button type="button" class="btn btn-primary disabled" id="videolink3" onclick="reset3()">Yesterday</button>
         </div>
     <br><br>
     <div class="btn-group-vertical">
         <button type="button" class="btn btn-default disabled" >Change Camera</button>
-        <button style="width:150px;" type="button" class="btn btn-primary active" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/wbbw.html';">WBB-West</button>
+        <button style="width:150px;" type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/wbbw.html';">WBB-West</button>
         <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/wbbs.html';">WBB-South</button>
         <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/mtmet.html';">MTMET</button>
         <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/naa.html';">NAA</button>
-		<button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/pelicam.html';">PELICam</button>
+        <button type="button" class="btn btn-primary active" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/pelicam.html';">PELICam</button>
     </div>
   </div>
 
   <div class="col-md-9">
         <video id="videoclip"  style="height:85vh;" autoplay controls loop title="Time Lapse">
-        <source id="mp4video" src="http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_hour.mp4" type="video/mp4"  />
+        <source id="mp4video" src="http://meso1.chpc.utah.edu/station_cameras/gunnison_cam/gunnison_cam_day.mp4" type="video/mp4"  />
         </video>
   </div>
   
@@ -75,9 +75,9 @@ function reset3(){
 // Change the video when button is clicked	
 	var videocontainer = document.getElementById('videoclip');
 	var videosource = document.getElementById('mp4video');
-	var recent_vid =  'http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_hour.mp4';
-	var day_vid =     'http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_day.mp4';
-	var yesterday_vid='http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_yesterday.mp4';
+	var recent_vid =  '#';
+	var day_vid =     'http://meso1.chpc.utah.edu/station_cameras/gunnison_cam/gunnison_cam_day.mp4';
+	var yesterday_vid='#';
 	 
 	var recent_button = document.getElementById("videolink1");
 	var day_button = document.getElementById("videolink2");
