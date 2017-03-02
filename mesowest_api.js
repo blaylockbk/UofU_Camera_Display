@@ -5,7 +5,7 @@
 
 var r_time = 300000; // Refresh time 5 min
 var api_token = '2562b729557f45f5958516081f06c9eb';
-var stid = 'WBB,MTMET,NAA,FPS,FPN,EYSC';
+var stid = 'WBB,MTMET,NAA,FPS,FPN,GNI,EYSC';
 setTimeout(poll, 500); // how often to update it
 
 function CtoF(tempC){
@@ -32,6 +32,9 @@ function short_name(data,stnidx){
         }
         else if (data.STATION[stnidx].NAME=='Neil Armstrong Academy'){
             s = 'NAA' 
+        }
+        else if (data.STATION[stnidx].NAME=='Gunnison Island'){
+            s = 'GNI' 
         }
         else if (data.STATION[stnidx].NAME=='Eyring Science Center'){
             s = 'EYSC' 
@@ -89,17 +92,24 @@ $.getJSON('http://api.mesowest.net/v2/stations/nearesttime?callback=?',
 	    airTemp_5   = short_name(data,5)+": " +CtoF(data.STATION[5].OBSERVATIONS.air_temp_value_1.value);}
 	    catch(err){
 		airTemp_5 = short_name(data,5)+": "  +'-na-';}
+
+        try{
+	    airTemp_6   = short_name(data,6)+": " +CtoF(data.STATION[6].OBSERVATIONS.air_temp_value_1.value);}
+	    catch(err){
+		airTemp_6 = short_name(data,6)+": "  +'-na-';}
 	
 	
 	  
 //set up variable it will return to the HTML 
   
   $('#ret-tempWBB').html(airTemp_0 + "&deg");
-  $('#ret-tempMTMET').html(airTemp_3 + "&deg");
-  $('#ret-tempNAA').html(airTemp_4 + "&deg"); 
-  $('#ret-tempFPN').html(airTemp_5 + "&deg");
-  $('#ret-tempFPS').html(airTemp_1 + "&deg");
-  $('#ret-tempEYSC').html(airTemp_2 + "&deg");
+  $('#ret-tempMTMET').html(airTemp_4 + "&deg");
+  $('#ret-tempNAA').html(airTemp_5 + "&deg"); 
+  $('#ret-tempFPN').html(airTemp_6 + "&deg");
+  $('#ret-tempFPS').html(airTemp_2 + "&deg");
+  $('#ret-tempGNI').html(airTemp_1 + "&deg");
+  $('#ret-tempEYSC').html(airTemp_3 + "&deg");
+  
 
 }); 
   setTimeout(poll, r_time); 

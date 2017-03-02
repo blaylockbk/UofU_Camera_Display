@@ -53,6 +53,13 @@ li > a{
 	color:#990000;
 }
 
+p > a {
+	color:#990000;
+}
+p > a:hover {
+	color: #990000;
+}
+
 td{
 width:33.33%;
 }
