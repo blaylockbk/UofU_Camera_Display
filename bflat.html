@@ -19,12 +19,12 @@ function reset1(){
 	document.getElementById("videolink3").className="btn btn-primary";
 	}
 function reset2(){
-	document.getElementById("videolink1").className="btn btn-primary";
+	document.getElementById("videolink1").className="btn btn-primary disabled";
 	document.getElementById("videolink2").className="btn btn-primary active";
 	document.getElementById("videolink3").className="btn btn-primary";
 	}
 function reset3(){
-	document.getElementById("videolink1").className="btn btn-primary";
+	document.getElementById("videolink1").className="btn btn-primary disabled";
 	document.getElementById("videolink2").className="btn btn-primary";
 	document.getElementById("videolink3").className="btn btn-primary active";
 }
@@ -33,7 +33,7 @@ function reset3(){
 
 <body style="height:100%;">
 <script src="./CurrentTemp.js"></script>
-<h2 align="center"><i class="fa fa-video-camera" aria-hidden="true"></i> Mountain Meteorology Lab</h2>
+<h2 align="center"><i class="fa fa-video-camera" aria-hidden="true"></i> Bonneville Salt Flats (BFLAT)</h2>
 
 
 
@@ -41,13 +41,13 @@ function reset3(){
     <div class="col-md-2">
         <div class="btn-group-vertical">
             <button style="width:150px;" type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/';">Home</button>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='http://155.97.226.135/view/viewer_index.shtml?id=1552';">Live</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0790486/wxinfo/cgi-bin/bflat_archive.cgi';">Live</button>
         </div>
         <br><br>
         <div class="btn-group-vertical">
             <button style="width:150px;" type="button" class="btn btn-default disabled" >Time Lapse</button>
-            <button type="button" class="btn btn-primary active" id="videolink1" onclick="reset1()">Recent</button>
-            <button type="button" class="btn btn-primary" id="videolink2" onclick="reset2()">Today</button>
+            <button type="button" class="btn btn-primary disabled" id="videolink1" onclick="reset1()">Recent</button>
+            <button type="button" class="btn btn-primary active" id="videolink2" onclick="reset2()">Today</button>
             <button type="button" class="btn btn-primary" id="videolink3" onclick="reset3()">Yesterday</button>
         </div>
     <br><br>
@@ -55,16 +55,16 @@ function reset3(){
         <button type="button" class="btn btn-default disabled" >Change Camera</button>
         <button style="width:150px;" type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/wbbw.html';">WBB-West</button>
         <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/wbbs.html';">WBB-South</button>
-        <button type="button" class="btn btn-primary active" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/mtmet.html';">MTMET</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/mtmet.html';">MTMET</button>
         <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/naa.html';">NAA</button>
-		<button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/pelicam.html';">PELICam</button>
-		<button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/bflat.html';">BFlat</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/pelicam.html';">PELICam</button>
+        <button type="button" class="btn btn-primary active" onclick="window.location.href='http://home.chpc.utah.edu/~u0553130/Camera_Display/bflat.html';">BFlat</button>
     </div>
   </div>
 
   <div class="col-md-9">
         <video id="videoclip"  style="height:85vh;" autoplay controls loop title="Time Lapse">
-        <source id="mp4video" src="http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_hour.mp4" type="video/mp4"  />
+        <source id="mp4video" src="http://meso1.chpc.utah.edu/station_cameras/bflat_cam/bflat_cam_day.mp4" type="video/mp4"  />
         </video>
   </div>
   
@@ -76,9 +76,9 @@ function reset3(){
 // Change the video when button is clicked	
 	var videocontainer = document.getElementById('videoclip');
 	var videosource = document.getElementById('mp4video');
-	var recent_vid =  'http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_hour.mp4';
-	var day_vid =     'http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_day.mp4';
-	var yesterday_vid='http://meso1.chpc.utah.edu/station_cameras/mtnmet_cam/mtnmet_cam_yesterday.mp4';
+	var recent_vid =  '#';
+	var day_vid =     'http://meso1.chpc.utah.edu/station_cameras/bflat_cam/bflat_cam_day.mp4';
+	var yesterday_vid='http://meso1.chpc.utah.edu/station_cameras/bflat_cam/bflat_cam_yesterday.mp4';
 	 
 	var recent_button = document.getElementById("videolink1");
 	var day_button = document.getElementById("videolink2");
