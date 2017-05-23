@@ -5,7 +5,7 @@
 
 var r_time = 300000; // Refresh time 5 min
 var api_token = '2562b729557f45f5958516081f06c9eb';
-var stid = 'WBB,MTMET,NAA,FPS,FPN,GNI,EYSC';
+var stid = 'WBB,MTMET,NAA,FPS,FPN,GNI,EYSC,BFLAT';
 setTimeout(poll, 500); // how often to update it
 
 function CtoF(tempC){
@@ -39,7 +39,9 @@ function short_name(data,stnidx){
         else if (data.STATION[stnidx].NAME=='Eyring Science Center'){
             s = 'EYSC' 
         }
-
+        else if (data.STATION[stnidx].NAME=='Bonneville Salt Flats'){
+            s = 'BFLAT' 
+        }
         else {
             s='error/unknown'}
             }
@@ -97,6 +99,11 @@ $.getJSON('http://api.mesowest.net/v2/stations/nearesttime?callback=?',
 	    airTemp_6   = short_name(data,6)+": " +CtoF(data.STATION[6].OBSERVATIONS.air_temp_value_1.value);}
 	    catch(err){
 		airTemp_6 = short_name(data,6)+": "  +'-na-';}
+
+        try{
+	    airTemp_7   = short_name(data,7)+": " +CtoF(data.STATION[7].OBSERVATIONS.air_temp_value_1.value);}
+	    catch(err){
+		airTemp_7 = short_name(data,7)+": "  +'-na-';}
 	
 	
 	  
@@ -109,7 +116,7 @@ $.getJSON('http://api.mesowest.net/v2/stations/nearesttime?callback=?',
   $('#ret-tempFPS').html(airTemp_2 + "&deg");
   $('#ret-tempGNI').html(airTemp_1 + "&deg");
   $('#ret-tempEYSC').html(airTemp_3 + "&deg");
-  
+  $('#ret-tempBFLAT').html(airTemp_7 + "&deg");  
 
 }); 
   setTimeout(poll, r_time); 

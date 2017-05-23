@@ -8,6 +8,7 @@ document.write("\
 | <a target='new' style='color:white;text-decoration:none;font-family:Segoe UI;' href='http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/cgi-bin/ts_multistations.cgi?stn1=FPN&stn2=FPN&stn3=&stn4=&start=&end=&units=F'> <span id='ret-tempFPN'>...</span> </a>\
 | <a target='new' style='color:white;text-decoration:none;font-family:Segoe UI;' href='http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/cgi-bin/ts_multistations.cgi?stn1=GNI&stn2=GNI&stn3=&stn4=&start=&end=&units=F'> <span id='ret-tempGNI'>...</span> </a>\
 | <a target='new' style='color:white;text-decoration:none;font-family:Segoe UI;' href='http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/cgi-bin/ts_multistations.cgi?stn1=EYSC&stn2=EYSC&stn3=&stn4=&start=&end=&units=F'> <span id='ret-tempEYSC'>...</span> </a>\
+| <a target='new' style='color:white;text-decoration:none;font-family:Segoe UI;' href='http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/cgi-bin/ts_multistations.cgi?stn1=BFLAT&stn2=BFLAT&stn3=&stn4=&start=&end=&units=F'> <span id='ret-tempBFLAT'>...</span> </a>\
 |\
 </div>\
 ");
