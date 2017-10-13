@@ -1,0 +1,393 @@
+<!--
+Camera Display Page - Glacier National Park Web Cams
+Created by Brian Blaylock
+University of Utah - Dept. of Atmospheric Sciences
+Contact: brian.blaylock@utah.edu
+Date: October 12, 2017
+-->
+
+<html>
+
+<head>
+	<title>Glacier NP Cameras</title>
+	<link type="text/css" rel="stylesheet" type="text/css" href="style.css">
+	<link href="Camera-icon.png" rel="shortcut icon" type="image/png">
+	<script src="https://use.fontawesome.com/606add7579.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/jquery/jquery-1.10.0.js"></script>
+	<script src="js/jquery/jquery-ui-1.10.3.js"></script>
+	<script src="js/jquery/jmenu.js"></script>
+	<script src="./mesowest_api.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<script>
+  
+</script>
+
+<body>
+<div class="container1">
+<h4 align="center"></h4>
+<h2 align="center"><i class="fa fa-video-camera" aria-hidden="true"></i> Glacier National Park Camera Display
+    <!-- Large modal (the intrusctions help button)-->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">About</button>
+
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content" style="padding:25px">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 style="font-size:22px;">About this Camera Display</h4><hr>
+            <h5 align="left" style="font-size:18px;">
+			<img src='../Brian_Blaylock/images/NPS.png' align=LEFT style="width:100px;padding-right:15px">
+				<p>These cameras are deployed by the National Park Service at <a href="https://www.nps.gov/glac/index.htm" target="_blank">Glacier National Park</a>
+				and are linked from their <a href='https://www.nps.gov/glac/learn/photosmultimedia/webcams.htm'><b>webpage</b></a>.
+				<p><a class='btn btn-danger' href='http://forecast.weather.gov/MapClick.php?lat=48.69608000000005&lon=-113.80705999999998#.WeDjYbpFwy8' target="_blank">Weather Forecast</a>
+            <img width=95% src='https://www.nps.gov/glac/learn/photosmultimedia/images/webcam-map-2017.gif'>
+			<hr>
+			<p>This page was created by <a href="http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/home.html">Brian Blaylock</a>
+			<p><a style="color:black;" href="https://github.com/blaylockbk/UofU_Camera_Display" target="_blank">
+                <i class="fa fa-github fa-fw" aria-hidden="true"></i>Get Code on Github
+                </a>
+            <br>
+            </h5>
+
+      </div>
+      </div>
+      </div>
+    <!--(end of about modal)-->
+</h2>
+
+<div class="row" style="padding-left:20px;">
+	
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Apgar Mt. Northeast View</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal1">
+			<img class='camera' src = "https://www.nps.gov/webcams-glac/aplocam.jpg">
+			</a>
+			<div class="modal fade" id="myModal1" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Apgar Mt. Northeast View</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src = "https://www.nps.gov/webcams-glac/aplocam.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Apgar Mt. Southeast View</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal2">
+			<img class='camera' src="https://www.nps.gov/webcams-glac/middleforkcam.jpg">
+			</a>
+			<div class="modal fade" id="myModal2" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Apgar Mt. Southeast View</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src="https://www.nps.gov/webcams-glac/middleforkcam.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Apgar Village</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal3">
+			<img class='camera' src = "https://www.nps.gov/webcams-glac/apvccam.jpg">
+			</a>
+			<div class="modal fade" id="myModal3" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Apgar Village</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src = "https://www.nps.gov/webcams-glac/apvccam.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<div class="row" style="padding-left:20px;">
+
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Lake McDonald</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal4">
+			<img class='camera' src = "https://www.nps.gov/webcams-glac/mcdcam1.jpg">
+			</a>
+			<div class="modal fade" id="myModal4" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Lake McDonald</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src = "https://www.nps.gov/webcams-glac/mcdcam1.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Logan Pass Parking Lot</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal5">
+			<img class='camera' src = "https://www.nps.gov/webcams-glac/loganpark.jpg">
+			</a>
+			<div class="modal fade" id="myModal5" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Logan Pass Parking</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src = "https://www.nps.gov/webcams-glac/loganpark.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Logan Pass - East View</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal6">
+			<img class='camera' src = "https://www.nps.gov/webcams-glac/logan1.jpg">
+			</a>
+			<div class="modal fade" id="myModal6" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Logan Pass - East View</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src = "https://www.nps.gov/webcams-glac/logan1.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="row" style="padding-left:20px;">
+    
+
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Logan Pass - South View</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal7">
+			<img class='camera' src="https://www.nps.gov/webcams-glac/logan2.jpg">
+			</a>
+			<div class="modal fade" id="myModal7" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Logan Pass - South View</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src="https://www.nps.gov/webcams-glac/logan2.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Many Glacier</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal8">
+			<img class='camera' src="https://www.nps.gov/webcams-glac/mgcam.jpg">
+			</a>
+			<div class="modal fade" id="myModal8" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Many Glacier</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src="https://www.nps.gov/webcams-glac/mgcam.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+        <div>
+			<h4 align="center">Middle Fork of the Flathead River</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal9">
+			<img class='camera' src="https://www.nps.gov/webcams-glac/flathead.jpg">
+			</a>
+			<div class="modal fade" id="myModal9" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Middle Fork of the Flathead River</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src="https://www.nps.gov/webcams-glac/flathead.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="row" style="padding-left:20px;">
+    
+
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Park Headquarters</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal10">
+			<img class='camera' src="https://www.nps.gov/webcams-glac/hqcam.jpg">
+			</a>
+			<div class="modal fade" id="myModal10" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Park Headquarters</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src="https://www.nps.gov/webcams-glac/hqcam.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">St. Mary Visitor Center</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal11">
+			<img class='camera' src="https://www.nps.gov/webcams-glac/smcam.jpg">
+			</a>
+			<div class="modal fade" id="myModal11" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">St. Mary Visitor Center</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src="https://www.nps.gov/webcams-glac/smcam.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+        <div>
+			<h4 align="center">Two Medicine</h4>
+			<a class="btn" data-toggle="modal" data-target="#myModal12">
+			<img class='camera' src="https://www.nps.gov/webcams-glac/tmcam.jpg">
+			</a>
+			<div class="modal fade" id="myModal12" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Two Medicine</h4>
+						</div>
+						<div class="modal-body">
+								<img class='camera' src="https://www.nps.gov/webcams-glac/tmcam.jpg">
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+
+</div><!--container-->
+<center>
+<a class='btn btn-default' href='http://home.chpc.utah.edu/~u0553130/Camera_Display/'>UofU Camera Display</a>
+</center>
+<br>
+<!-- Things to add:
+1) Map of camera locations
+2) Map with radar over it
+-->
+<script src="./siteclose.js"></script>
+</body>
+</html>
