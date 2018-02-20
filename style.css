@@ -16,7 +16,7 @@ Style sheet for Camera Display
 }
 
 html, body{
-	background: linear-gradient(white, #3399ff);
+	background: linear-gradient(rgb(194, 194, 194),#55aaff);
 }
 
 h1{
