@@ -1,0 +1,178 @@
+<!--
+Camera Display Page
+Created by Brian Blaylock
+University of Utah - Dept. of Atmospheric Sciences
+Contact: brian.blaylock@utah.edu
+Updated: 16 November 2016
+Updated: 19 January 2017 - Added Bootstrap v3 styling
+-->
+
+<html>
+
+<head>
+    <script src="./js/siteopen.js"></script>
+</head>
+
+<script>
+  
+</script>
+
+<body>
+<script src="./js/CurrentTemp.js"></script>
+<div class="container1">
+<h4 align="center"></h4>
+<h2 align="center"><i class="fas fa-video"></i> MesoWest Camera Display
+
+
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		About
+	  </button>
+	  
+	  <!-- Modal -->
+	  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">About this Camera Display</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body" style="font-size:20">
+				<p>These cameras are deployed by the <a href="http://meso1.chpc.utah.edu/mesowest_overview/">MesoWest research group</a> at the 
+				<a href="http://www.atmos.utah.edu/">University of Utah Dept. of Atmospheric Sciences</a>.
+				<br>
+				<img src='cam_locs.png' width='100%'>
+				<hr>
+				<p>Clicking the live images to watch time lapse videos (only WBB-West, WBB-South, Syracuse, and NAA).
+				<hr>
+				<p>Archived videos can be found here: <i class="far fa-hand-point-right"></i>
+				<a class='btn btn-success' href="http://meso1.chpc.utah.edu/station_cameras/archive/">Video Archive</a>
+			</div>
+			<div class="modal-footer" style='font-size:15'>
+				<p>These pages were created by <a href="http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/home.html">Brian Blaylock</a>
+				<p><a href="https://github.com/blaylockbk/UofU_Camera_Display" target="_blank"><i class="fab fa-github"></i>Get Code on Github</a>
+				<p align=center>Powered By:<a href="https://mesowest.org/" target="_blank"><img class="style1" src="http://home.chpc.utah.edu/~u0553130/Brian_Blaylock/images/MesoWest/MesoWest_1997-2017_largeyears.png" style="background-color:#990000; width:150px"></a>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>
+	  <!-- end of modal -->
+	</h2>
+
+<div class="row" style="padding-left:20px;">
+    <div class="col-md-4">
+		<div>
+			<h4 align="center">William Browning Building - West</h4>
+			<a href="wbbw.html">
+			<img class='camera' src = "http://155.98.55.211/mjpg/video.mjpg" title="Click for timelapse" alt='Image only available if on UofU network'>
+			</a>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">William Browning Building - South</h4>
+			<a href="wbbs.html">
+			<img class='camera' src="http://155.98.55.212/mjpg/video.mjpg" title="Click for timelapse" alt='Image only available if on UofU network'>
+			</a>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<!--mtmet was decomissioned in June, 2017
+		<div>
+			<h4 align="center">Mountain Meteorology Lab - South</h4>
+			<a href="mtmet.html">
+			<img src = "http://155.97.226.135/mjpg/video.mjpg" title="Click for timelapse">
+			</a>
+		</div>
+		-->
+		<div>
+			<h4 align="center">Syracuse (Antelope Island Causeway) - West</h4>
+			<a href="syr.html">
+			<img class='camera' src = "http://meso1.chpc.utah.edu/station_cameras/uusyr_cam/uusyr_cam_current.jpg" title="Click for timelapse">
+			</a>
+		</div>
+	</div>
+</div>
+<br>
+<div class="row" style="padding-left:20px;">
+    	<div class="col-md-4">
+		<div>
+			<h4 align="center">Bonneville Salt Flats - Northwest</h4>
+			<a href="bflat.html">
+			<img class='camera' src = "http://meso1.chpc.utah.edu/station_cameras/bflat_cam/bflat_cam_current.jpg" title="Click for timelapse">
+			</a> 
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Neil Armstrong Academy - East</h4>
+			<a href="naa.html">
+			<img class='camera' src = "http://205.124.147.71/mjpg/video.mjpg" title="Click for timelapse">
+			</a>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">PELICam, Gunnison Island - South</h4>
+			<a href="pelicam.html">
+			<img class='camera' src = "http://meso1.chpc.utah.edu/station_cameras/gunnison_cam/gunnison_cam_current.jpg" title="Click for timelapse">
+			<a class='btn btn-primary' href="https://wildlife.utah.gov/pelican_webmap/" target="_blank">Pelican Tracker</a>
+			</a> 
+		</div>
+	</div>
+</div>
+<br>
+<div class="row" style="padding-left:20px;">
+    
+
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Flight Park North - North West</h4>
+			<a href="http://173.165.139.21/view/view.shtml?id=511&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1">
+			<img class='camera' src="http://173.165.139.21/mjpg/video.mjpg" title="Click for source page">
+			</a>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div>
+			<h4 align="center">Timpanogos (Provo)</h4>
+			<a href="http://marvin.byu.edu/Weather/cgi-bin/getTimpImage">
+			<img class='camera' src="http://marvin.byu.edu/Weather/webcam800.jpg" title="Click for timelapse">
+			</a>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div>
+			<br><br>
+			<p> Other Camera Links:<br>
+				<center>
+			<a class='btn btn-primary' style='width:250px' href="http://home.chpc.utah.edu/~u0790486/wxinfo/cgi-bin/uunet_camera_explorer.cgi">Alex's camera explorer</a>
+			<a class='btn btn-primary' style='width:250px' href="http://meso1.chpc.utah.edu/NAA/">NAA Weather Display</a>
+			<a class='btn btn-primary' style='width:250px' href="http://www.bing.com/maps/", target="_blank"> Traffic Cameras (Bing Maps)</a>
+			<a class='btn btn-primary' style='width:250px' href="http://snowflakes.utah.edu/liveShowcase/snowflakes.html", target="_blank"> Snowflake Showcase</a>
+			<a class='btn btn-primary' style='width:250px' href="http://meso1.chpc.utah.edu/station_cameras/kalf_plot_cam/kalf_plot_cam_current.jpg", target="_blank"> KALEF Plot Snow Cam</a>
+			<a class='btn btn-primary' style='width:250px' href="http://meso1.chpc.utah.edu/station_cameras/archive/sun_cam/", target="_blank"> SunCrest Archive</a>
+			<a class='btn btn-primary' style='width:250px' href="http://www.hebervalleyut.com/", target="_blank"> Timpanogos from Heber Valley</a>
+			<a class='btn btn-primary' style='width:250px' href="http://home.chpc.utah.edu/~krueger/covecam/", target="_blank"> Olympus Cove</a>
+			<a class='btn btn-primary' style='width:250px' href="http://udottraffic.utah.gov/", target="_blank"> UDOT Traffic Cams</a>
+			<a class='btn btn-primary' style='width:250px' href="http://forecast.utah.edu/pointer/real-time/cams.html", target="_blank"> UofU UDOT Cams</a>
+			<a class='btn btn-primary' style='width:250px' href="http://home.chpc.utah.edu/~u0553130/Camera_Display/GlacierNP.html"> Glacier National Park Web Cams</a>
+				</center>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+
+</div><!--container-->
+
+<!-- Things to add:
+1) Map of camera locations
+2) Map with radar over it
+-->
+<script src="./js/siteclose.js"></script>
+</body>
+</html>
