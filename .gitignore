@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+
+get_token.py
+*.pyc
+*.out
+*.nc
+*.nc4
+*.grib2
+*.h5
+*.npy
+*.nfs*
+
+*.mov
+*.mp4
+
+frame*.jpg
