@@ -76,7 +76,7 @@ Updates: 20 February 2018 - Changed to Bootstrap 4
 				</h5>
 			</div>
 			<a href="wbbw.html">
-				<img class='card-img-bottom' src = "http://155.98.55.211/mjpg/video.mjpg" title="Click for timelapse" alt='Image only available if on UofU network'>
+				<img class='card-img-bottom'  id="wbbw" src = "http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_current.jpg" title="Click for timelapse">
 			</a>
 		</div>
 	</div>
@@ -89,7 +89,7 @@ Updates: 20 February 2018 - Changed to Bootstrap 4
 				</h5>
 			</div>
 			<a href="wbbs.html">
-				<img class='card-img-bottom' src="http://155.98.55.212/mjpg/video.mjpg" title="Click for timelapse" alt='Image only available if on UofU network'>
+				<img class='card-img-bottom'  id="wbbs" src = "http://meso1.chpc.utah.edu/station_cameras/wbbs_cam/wbbs_cam_current.jpg" title="Click for timelapse">
 			</a>
 		</div>
 	</div>
@@ -234,6 +234,16 @@ Updates: 20 February 2018 - Changed to Bootstrap 4
 
 <script>
 	/*automatically update static camera images every minute*/
+	$(function() { 
+		setInterval(function() { 
+			$('#wbbw').attr('src', function(i, old) { return "http://meso1.chpc.utah.edu/station_cameras/wbbw_cam/wbbw_cam_current.jpg?rand=" + Math.random(); }); 
+		}, 60000);
+	});
+	$(function() { 
+		setInterval(function() { 
+			$('#wbbs').attr('src', function(i, old) { return "http://meso1.chpc.utah.edu/station_cameras/wbbs_cam/wbbs_cam_current.jpg?rand=" + Math.random(); }); 
+		}, 60000);
+	});
 	$(function() { 
 		setInterval(function() { 
 			$('#uusyr').attr('src', function(i, old) { return "http://meso1.chpc.utah.edu/station_cameras/uusyr_cam/uusyr_cam_current.jpg?rand=" + Math.random(); }); 
